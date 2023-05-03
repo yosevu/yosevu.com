@@ -34,7 +34,7 @@ export default function About() {
         <span>To learn more about my skills and experience, please see </span>
         <Link
           className="h-7 border-b-2 pb-1 border-black hover:border-b-4 hover:pb-1"
-          href="https://docs.google.com/document/d/1fp1T_-C79-gWnDKcjnUYyXq_w0Y9W8ZWKPwnJzkhxxk/edit?usp=sharing"
+          href="https://docs.google.com/document/d/1RoMSK3FDpdW3ruBT5mfxpjnWHrzj3IMfBS3aCI5H3yg/edit?usp=sharing"
         >
           my resume
         </Link>
