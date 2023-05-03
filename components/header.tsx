@@ -6,11 +6,12 @@ interface HeaderLink {
   href: string
 }
 
-type HeaderProps = {
-  links: HeaderLink[];
-}
+const headerLinks: HeaderLink[] = [
+  { text: 'home', href: '/' },
+  { text: 'about', href: '/about' }
+]
 
-export default function Header({ links }: HeaderProps) {
+export default function Header() {
   const [isTransformed, setIsTransformed] = useState(true)
   const transformClasses = isTransformed
     ? 'rotate-180 scale-x-[-1]'
@@ -24,16 +25,15 @@ export default function Header({ links }: HeaderProps) {
     <header className="mb-8">
       <Link href="/">
         <span
-          className={`border bg-black text-white inline-block font-sans text-7xl px-2 transition-transform origin-center duration-300 ${transformClasses}`}
+          className={`border mb-2 bg-black text-white inline-block font-sans text-7xl px-2 transition-transform origin-center duration-500 ${transformClasses}`}
           onClick={handleClick}
         >
           λ
         </span>
       </Link>
-      <br />
-      <ul className="flex my-4">
-        {links.map((link) => (
-          <li className="border-b-2 pb-1 border-black mr-6 hover:border-b-4 hover:pb-0" key={link.text}>
+      <ul className="flex gap-4 mt-2">
+        {headerLinks.map((link) => (
+          <li className="border-b-2 pb-1 border-black hover:border-b-4 hover:pb-0" key={link.text}>
             <Link href={link.href}>{link.text}</Link>
           </li>
         ))}
