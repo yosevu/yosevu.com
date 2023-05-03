@@ -26,6 +26,7 @@ export default function Header() {
       <Link href="/">
         <span
           className={`text-slight-brown border mb-2 bg-black inline-block font-sans text-7xl px-2 transition-transform origin-center duration-500 ${transformClasses}`}
+          aria-label="Inverted and reflected lambda icon that transforms back to a lambda when clicked"
           onClick={handleClick}
         >
           λ

@@ -7,13 +7,7 @@ export default function Home() {
   return (
     <>
       <div>
-        <h1>Yosevu Kilonzo</h1>
-        <p>
-          Hi, I'm Yosevu. I'm a developer who loves the web. I care
-          about building tools, applications, and experiences that help us{' '}
-          <strong>connect</strong> and <strong>coordinate</strong> <em>better</em>{' '}
-          as <strong>human beings</strong>.
-        </p>
+        <h1 className="mb-4">Yosevu Kilonzo</h1>
         <Image
           className="rounded-full inline-block my-2"
           src="/profile.jpg"
@@ -21,6 +15,13 @@ export default function Home() {
           width={128}
           height={128}
         />
+
+        <p>
+          Hi, I'm Yosevu. I'm a developer who loves the web. I care about
+          building tools, applications, and experiences that help us{' '}
+          <strong>connect</strong> and <strong>coordinate</strong>{' '}
+          <em>better</em> as <strong>human beings</strong>.
+        </p>
       </div>
 
       <div>
