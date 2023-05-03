@@ -7,10 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        'slight-brown': '#F5F5DC',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      colors: {
+        'slight-brown': '#F5F5DC',
       },
       fontFamily: {
         sans: ['Ubuntu', 'sans-serif'],
@@ -18,4 +24,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+}

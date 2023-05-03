@@ -25,7 +25,7 @@ export default function Header() {
     <header className="mb-8">
       <Link href="/">
         <span
-          className={`border mb-2 bg-black text-white inline-block font-sans text-7xl px-2 transition-transform origin-center duration-500 ${transformClasses}`}
+          className={`text-slight-brown border mb-2 bg-black inline-block font-sans text-7xl px-2 transition-transform origin-center duration-500 ${transformClasses}`}
           onClick={handleClick}
         >
           λ
