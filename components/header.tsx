@@ -22,7 +22,7 @@ export default function Header() {
   }
 
   return (
-    <header className="mb-8">
+    <header className="mb-12 md:flex md:flex-col">
       <Link href="/">
         <span
           className={`text-slight-brown border mb-2 bg-black inline-block font-sans text-7xl px-2 transition-transform origin-center duration-500 ${transformClasses}`}
@@ -31,10 +31,11 @@ export default function Header() {
           λ
         </span>
       </Link>
-      <ul className="flex gap-4 mt-2">
+      <ul className="flex gap-8 mt-2 md:flex-col md:gap-6">
+ 
         {headerLinks.map((link) => (
-          <li className="border-b-2 pb-1 border-black hover:border-b-4 hover:pb-0" key={link.text}>
-            <Link href={link.href}>{link.text}</Link>
+          <li>
+            <Link className="text-xl border-b-2 pb-1 border-black hover:border-b-4 hover:pb-1" key={link.text} href={link.href}>{link.text}</Link>
           </li>
         ))}
       </ul>

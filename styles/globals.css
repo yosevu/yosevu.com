@@ -9,5 +9,5 @@ h1 {
 }
 
 p {
-  @apply my-4;
+  @apply my-4 leading-relaxed;
 }
