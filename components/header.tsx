@@ -35,7 +35,7 @@ export default function Header() {
       <ul className="flex gap-8 mt-2 md:flex-col md:gap-6">
  
         {headerLinks.map((link) => (
-          <li>
+          <li key={link.text}>
             <Link className="text-xl border-b-2 pb-1 border-black hover:border-b-4 hover:pb-1" key={link.text} href={link.href}>{link.text}</Link>
           </li>
         ))}

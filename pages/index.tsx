@@ -37,7 +37,7 @@ export default function Home() {
         </p>
         <ul className="flex gap-4">
           {socialLinks.map(({ name, href, Icon }) => (
-            <li className="w-6">
+            <li key={name} className="w-6">
               <Link href={href} aria-label={`Connect with me on ${name}`}>
                 <Icon />
               </Link>
