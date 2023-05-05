@@ -20,8 +20,7 @@ export default function About() {
           web technologies within the JavaScript ecosystem.
         </p>
         <div>
-          <p>My top 3 areas of interest include:
-</p>
+          <p>My top 3 areas of interest include:</p>
           <ul className="list-disc pl-0">
             <li className="ml-5">Web technologies</li>
             <li className="ml-5">Distributed systems</li>
@@ -33,7 +32,7 @@ export default function About() {
       <p>
         <span>To learn more about my skills and experience, please see </span>
         <Link
-          className="h-7 border-b-2 pb-1 border-black hover:border-b-4 hover:pb-1"
+          className="h-7 border-b-2 border-black dark:border-slight-brown hover:border-b-4"
           href="https://docs.google.com/document/d/1RoMSK3FDpdW3ruBT5mfxpjnWHrzj3IMfBS3aCI5H3yg/edit?usp=sharing"
         >
           my resume

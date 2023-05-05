@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
+body{
+  @apply font-sans;
+}
+
 h1 {
   @apply text-4xl;
 }

@@ -28,7 +28,7 @@ export default function Home() {
         <p>
           Feel free to reach out to me via email at{' '}
           <Link
-            className="border-b-2 border-black hover:border-b-4"
+            className="border-b-2 border-black dark:border-slight-brown hover:border-b-4"
             href="mailto:hello@yosevu.com"
           >
             hello@yosevu.com
@@ -39,7 +39,7 @@ export default function Home() {
           {socialLinks.map(({ name, href, Icon }) => (
             <li key={name} className="w-6">
               <Link href={href} aria-label={`Connect with me on ${name}`}>
-                <Icon />
+                <Icon classes='dark:bg-black dark:fill-slight-brown' />
               </Link>
             </li>
           ))}
