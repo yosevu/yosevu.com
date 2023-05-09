@@ -1,9 +1,16 @@
 import { createContext, useContext, useState } from 'react'
+import Script from 'next/script'
 import Header from '@/components/header'
 import useTheme, { ThemeContextType, ThemeProvider } from '@/hooks/use-theme'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+
+declare global {
+  interface Window {
+    dataLayer: any[]
+  }
+}
 
 export default function App({ Component, pageProps }: AppProps) {
   const [theme, toggleTheme] = useTheme()
@@ -20,6 +27,21 @@ export default function App({ Component, pageProps }: AppProps) {
           content="Yosevu Kilonzo's personal website."
         />
       </Head>
+      {/* Google tag (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-0XRWZ5R5HC"
+        strategy="afterInteractive"
+      />
+      <Script strategy="afterInteractive">
+        {`
+          if (typeof window !== 'undefined') {
+            window.dataLayer = window.dataLayer || []
+            function gtag(){dataLayer.push(arguments)}
+            gtag('js', new Date())
+            gtag('config', 'G-0XRWZ5R5HC')
+          }
+        `}
+      </Script>
       <ThemeProvider value={[theme, toggleTheme]}>
         <div className={theme}>
           <main
