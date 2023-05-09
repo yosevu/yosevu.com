@@ -1,7 +1,6 @@
-import { createContext, useContext, useState } from 'react'
 import Script from 'next/script'
 import Header from '@/components/header'
-import useTheme, { ThemeContextType, ThemeProvider } from '@/hooks/use-theme'
+import useTheme, { ThemeProvider } from '@/hooks/use-theme'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
