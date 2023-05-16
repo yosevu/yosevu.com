@@ -10,6 +10,7 @@ interface HeaderLink {
 const headerLinks: HeaderLink[] = [
   { text: 'home', href: '/' },
   { text: 'about', href: '/about' },
+  { text: 'projects', href: '/projects' },
 ]
 
 export default function Header() {
