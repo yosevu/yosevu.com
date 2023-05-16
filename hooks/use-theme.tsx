@@ -12,7 +12,19 @@ export const ThemeContext = createContext<ThemeContextType>([
   () => {},
 ])
 
-export const ThemeProvider = ThemeContext.Provider
+type ThemeProviderProps = {
+  children: React.ReactNode
+}
+
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+  const [theme, toggleTheme] = useTheme()
+
+  return (
+    <ThemeContext.Provider value={[theme, toggleTheme]}>
+      {children}
+    </ThemeContext.Provider>
+  )
+} 
 
 export default function useTheme(): ThemeContextType {
   const [theme, setTheme] = useState<Theme>('light')

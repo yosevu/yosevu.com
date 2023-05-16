@@ -12,7 +12,7 @@ declare global {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [theme, toggleTheme] = useTheme()
+  const [theme] = useTheme()
 
   return (
     <>
@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
           }
         `}
       </Script>
-      <ThemeProvider value={[theme, toggleTheme]}>
+      <ThemeProvider>
         <div className={theme}>
           <main
             className={`bg-slight-brown dark:bg-black dark:text-slight-brown px-16 py-16 md:flex md:items-start md:gap-24`}
