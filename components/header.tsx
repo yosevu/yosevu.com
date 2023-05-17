@@ -1,6 +1,6 @@
-import { ThemeContext } from '@/hooks/use-theme'
+import useTheme from '@/hooks/use-theme'
 import Link from 'next/link'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 
 interface HeaderLink {
   text: string
@@ -14,7 +14,7 @@ const headerLinks: HeaderLink[] = [
 ]
 
 export default function Header() {
-  const [, toggleTheme] = useContext(ThemeContext)
+  const [, toggleTheme] = useTheme()
   const [isTransformed, setIsTransformed] = useState(true)
   const transformClasses = isTransformed
     ? 'rotate-180 scale-x-[-1]'

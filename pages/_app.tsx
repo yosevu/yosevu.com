@@ -1,9 +1,10 @@
 import Script from 'next/script'
 import Header from '@/components/header'
-import useTheme, { ThemeProvider } from '@/hooks/use-theme'
+import { ThemeProvider } from '@/hooks/use-theme'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import Theme from '@/components/theme'
 
 declare global {
   interface Window {
@@ -12,8 +13,6 @@ declare global {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [theme] = useTheme()
-
   return (
     <>
       <Head>
@@ -42,7 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
         `}
       </Script>
       <ThemeProvider>
-        <div className={theme}>
+        <Theme>
           <main
             className={`bg-slight-brown dark:bg-black dark:text-slight-brown px-16 py-16 md:flex md:items-start md:gap-24`}
           >
@@ -51,7 +50,7 @@ export default function App({ Component, pageProps }: AppProps) {
               <Component {...pageProps} />
             </div>
           </main>
-        </div>
+        </Theme>
       </ThemeProvider>
     </>
   )
