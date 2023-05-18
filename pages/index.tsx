@@ -35,7 +35,7 @@ export default function Home() {
           </Link>
           . You can also connect with me on GitHub, LinkedIn, or Twitter:
         </p>
-        <ul className="flex gap-4">
+        <ul className="flex gap-8">
           {socialLinks.map(({ name, href, Icon }) => (
             <li key={name} className="w-6">
               <Link href={href} aria-label={`Connect with me on ${name}`}>

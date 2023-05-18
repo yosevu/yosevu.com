@@ -3,8 +3,10 @@ import Link from 'next/link'
 export default function About() {
   return (
     <>
-      <div className="mb-4">
+      <div className="mb-6">
         <h1>About me</h1>
+      </div>
+      <div>
         <p>
           I grew up in Kenya and studied linguistics at the University of
           Colorado before teaching English as a second language. This experience

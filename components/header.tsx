@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <header className="mb-12 md:flex md:flex-col">
       <button
-        className={`text-slight-brown dark:text-black mb-4 bg-black dark:bg-slight-brown inline-block font-sans text-7xl p-2 transition-transform origin-center duration-500 ${transformClasses}`}
+        className={`text-slight-brown dark:text-black mb-6 bg-black dark:bg-slight-brown inline-block font-sans text-7xl p-3 transition-transform origin-center duration-500 ${transformClasses}`}
         title="Toggle dark mode theme"
         aria-label="Toggle dark mode theme"
         onClick={handleClick}

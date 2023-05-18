@@ -43,10 +43,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider>
         <Theme>
           <main
-            className={`bg-slight-brown dark:bg-black dark:text-slight-brown px-16 py-16 md:flex md:items-start md:gap-24`}
+            className={`h-screen bg-slight-brown dark:bg-black dark:text-slight-brown p-8 md:p-16 md:flex md:items-start md:gap-24`}
           >
             <Header />
-            <div className="md:gap-8 min-h-screen max-w-screen-sm">
+            <div className="md:gap-8 max-w-screen-sm">
               <Component {...pageProps} />
             </div>
           </main>
