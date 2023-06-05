@@ -1,8 +1,19 @@
 import Link from 'next/link'
+import Head from 'next/head'
 
 export default function Projects() {
   return (
     <>
+      <Head>
+        <title>Yosevu's projects</title>
+        <meta property="og:title" content="Yosevu's projects" key="title" />
+
+        <meta name="description" content="Yosevu Kilonzo's projects" />
+        <meta
+          property="og:description"
+          content="Yosevu Kilonzo's projects"
+        />
+      </Head>
       <div className="mb-6">
         <h1>Projects</h1>
       </div>

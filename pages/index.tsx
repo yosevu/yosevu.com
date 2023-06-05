@@ -1,11 +1,22 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import getSocialLinks from '@/components/icons'
+import Head from 'next/head'
 
 export default function Home() {
   const socialLinks = getSocialLinks()
   return (
     <>
+      <Head>
+        <title>Yosevu Kilonzo</title>
+        <meta property="og:title" content="Yosevu Kilonzo" key="title" />
+
+        <meta name="description" content="Yosevu Kilonzo's website" />
+        <meta
+          property="og:description"
+          content="Yosevu Kilonzo's website"
+        />
+      </Head>
       <div>
         <h1 className="mb-4">Yosevu Kilonzo</h1>
         <Image

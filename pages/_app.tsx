@@ -3,7 +3,6 @@ import Header from '@/components/header'
 import { ThemeProvider } from '@/hooks/use-theme'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import Head from 'next/head'
 import Theme from '@/components/theme'
 
 declare global {
@@ -15,16 +14,6 @@ declare global {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <title>Yosevu Kilonzo</title>
-        <meta property="og:title" content="Yosevu Kilonzo" key="title" />
-
-        <meta name="description" content="Yosevu Kilonzo's personal website." />
-        <meta
-          property="og:description"
-          content="Yosevu Kilonzo's personal website."
-        />
-      </Head>
       {/* Google tag (gtag.js) */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-0XRWZ5R5HC"
